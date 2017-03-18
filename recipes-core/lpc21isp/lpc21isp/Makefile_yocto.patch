@@ -1,0 +1,12 @@
+Index: code/Makefile
+===================================================================
+--- code/Makefile	(revision 21)
++++ code/Makefile	(working copy)
+@@ -1,7 +1,6 @@
+ all:      lpc21isp
+ 
+ GLOBAL_DEP  = adprog.h lpc21isp.h lpcprog.h lpcterm.h
+-CC = gcc
+ 
+ ifneq ($(findstring(freebsd, $(OSTYPE))),)
+ CFLAGS+=-D__FREEBSD__
