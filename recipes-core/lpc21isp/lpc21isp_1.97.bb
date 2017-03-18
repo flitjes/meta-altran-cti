@@ -14,4 +14,9 @@ SRC_URI = "svn://svn.code.sf.net/p/lpc21isp/;module=code;protocol=https \
           file://Makefile_yocto.patch"
 
 S = "${WORKDIR}/code"
+DEPENDS = ""
 
+do_install() {
+	install -d ${D}${bindir}
+	install -m 0755 lpc21isp ${D}${bindir}
+}
